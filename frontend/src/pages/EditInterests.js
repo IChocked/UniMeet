@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import { Link, Redirect, useHistory } from 'react-router-dom'
 
-const Interests = () => {
+const EditInterests = () => {
   // Check to see if tags are selected
   const [checked, setChecked] = useState(false)
 
@@ -11,7 +11,7 @@ const Interests = () => {
 
   // Handle Submit Button
   const handleSubmit = () => {
-    history.push('/schedule')
+    history.push('/homepage')
   }
 
   // Handle Click - Doesn't account for individual tag's status
@@ -30,10 +30,6 @@ const Interests = () => {
   return (
     <div className='interests'>
       <h3>Interests</h3>
-
-      <div className='label'>
-        <h2>Please select all that interest you.</h2>
-      </div>
 
       <div className='tags'>
         <button
@@ -200,10 +196,10 @@ const Interests = () => {
           cursor: 'pointer'
         }}
       >
-        <b>Next Step</b>
+        <b>Save</b>
       </button>
     </div>
   )
 }
 
-export default Interests
+export default EditInterests

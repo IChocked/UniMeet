@@ -15,6 +15,10 @@ const Schedule = () => {
     <div className='schedule'>
       <h3>Schedule</h3>
 
+      <div className='label'>
+        <h2>Please select the times you're available to talk.</h2>
+      </div>
+
       <button
         onClick={handleSubmit}
         type='submit'

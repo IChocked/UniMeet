@@ -31,6 +31,14 @@ h2 {
   padding: none;
 }
 
+h4 {
+  text-shadow: 2px 2px 4px #000000;
+}
+
+p {
+  color: #1D3557;
+}
+
 .home>button {
   transition: transform 0.2s ease-out;
 }
@@ -39,7 +47,7 @@ h2 {
   transform: scale(1.05);
 }
 
-.motto {
+.label {
   text-align: center;
   margin-bottom: 50px;
   display: absolute;
@@ -102,4 +110,34 @@ button:focus {
   margin-left: 30%;
   margin-right: 30%;
   margin-bottom: 50px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 100px;
+}
+
+.home>.buttons>button {
+  transition: transform 0.2s ease-out;
+}
+
+.home>.buttons>button:hover {
+  transform: scale(1.05);
+}
+
+.matched>.buttons>button {
+  transition: transform 0.2s ease-out;
+}
+
+.matched>.buttons>button:hover {
+  transform: scale(1.05);
+}
+
+.content {
+  margin-left: 20% ;
+  margin-right: 20%;
 }
