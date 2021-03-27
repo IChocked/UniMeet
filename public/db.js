@@ -18,10 +18,12 @@ function validateUni(uni) {}
 
 // @Param: valid university (a key in the db), name: string, interests: string array
 function populateUser(uni, name, interests) {
+  console.log("Complete")
   let user = auth.currentUser
-  database.ref("Universities/" + uni + "/" + user.uid).set({
-    Name: name,
-    Interests: {
+  database.ref("users/" + user.uid).set({
+    name: name,
+    university: uni,
+    interests: {
       0: interests[0],
       1: interests[1],
       2: interests[2],
@@ -29,9 +31,28 @@ function populateUser(uni, name, interests) {
       4: interests[4]
     }
   })
+
 }
 
+// @Param: uid of the user you want to retrieve (auth.currentUser.uid if current user)
+function retrieveUser(uid) {
+  database.ref().child("users").child(uid).get().then(function(snapshot) {
+    if (snapshot.exists()) {
+      console.log(snapshot.val());
+    }
+    else {
+      console.log("No data available");
+    }
+  }).catch(function(error) {
+    console.error(error);
+  });
+}
+
+
+
 login("bharde@me.com", "temP123@")
+retrieveUser("Zu5fWXfxl4V5cOGEGzoeoMA6tfA2")
+
 
 // let values = login("bharde@me.com", "temP123@")
 // let user = values[0]
