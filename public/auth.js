@@ -34,7 +34,8 @@ function login(email, pass) {
     console.log(error)
   })
   .finally(() => {
-    // populateUser("UCLA", "Brian", ["climbing", "climbing", "climbing", "climbing", "climbing"])
+    populateUser("UCLA", "Brian", ["climbing", "climbing", "climbing", "climbing", "climbing"])
+    // modifyInterests(["temp", "temp", "temp", "temp", "temp"])
   })
 }
 
