@@ -1,0 +1,105 @@
+* {
+  font-family: 'Arial';
+}
+
+html, body, #app, #app>div {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #457B9D;
+  color: white;
+  height: 100%;
+}
+
+header {
+  font-size: 100px;
+  text-align: center;
+  text-shadow: 2px 2px 4px #000000;
+  margin-top: 70px;
+}
+
+h3 {
+  font-size: 60px;
+  text-align: center;
+  text-shadow: 2px 2px 4px #000000;
+  margin-top: 70px;
+}
+
+h2 {
+  padding: none;
+}
+
+.home>button {
+  transition: transform 0.2s ease-out;
+}
+
+.home>button:hover {
+  transform: scale(1.05);
+}
+
+.motto {
+  text-align: center;
+  margin-bottom: 50px;
+  display: absolute;
+  top: 200px;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+textarea {
+  resize: none;
+  outline: none;
+}
+
+.get-started {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 40px;
+  padding-left: 40px;
+  text-align: center;
+  color: white;
+  border-radius: 25px;
+  border: none;
+  background-color: #E63946;
+  font-size: 15px;
+  resize: none;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+  cursor: pointer
+}
+
+.input {
+  margin-bottom: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+input:focus {
+  outline: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+.zoom-link {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 190px;
+  height: 35px;
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.4);
+}
+
+.zoom-link>input {
+  color: #1D3557;
+}
+
+.tags {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-bottom: 50px;
+}
