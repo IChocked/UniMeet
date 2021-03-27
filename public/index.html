@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyACQvxT_lrFID8rled2x7oVlCAvHMzyhO8",
+        authDomain: "unimeet-30884.firebaseapp.com",
+        databaseURL: "https://unimeet-30884-default-rtdb.firebaseio.com",
+        projectId: "unimeet-30884",
+        storageBucket: "unimeet-30884.appspot.com",
+        messagingSenderId: "1059696237910",
+        appId: "1:1059696237910:web:d4ae3d744ac5b0ec034af7",
+        measurementId: "G-30HP7BY9Y3"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      var database = firebase.database();
+      var auth = firebase.auth();
+
+    </script>
+
+  </head>
+  <body>
+
+	<script src="db.js"></script>
+  <p>Test to see if connected</p>
+
+  </body>
+</html>
