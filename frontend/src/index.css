@@ -1,14 +1,17 @@
 * {
-  font-family: 'Arial';
+  font-family: "Arial";
 }
 
-html, body, #app, #app>div {
+html,
+body,
+#app,
+#app > div {
   height: 100%;
   width: 100%;
 }
 
 body {
-  background-color: #457B9D;
+  background-color: #457b9d;
   color: white;
   height: 100%;
   margin: 0px;
@@ -37,14 +40,14 @@ h4 {
 }
 
 p {
-  color: #1D3557;
+  color: #1d3557;
 }
 
-.home>button {
+.home > button {
   transition: transform 0.2s ease-out;
 }
 
-.home>button:hover {
+.home > button:hover {
   transform: scale(1.05);
 }
 
@@ -70,11 +73,11 @@ textarea {
   color: white;
   border-radius: 25px;
   border: none;
-  background-color: #E63946;
+  background-color: #e63946;
   font-size: 15px;
   resize: none;
   box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
-  cursor: pointer
+  cursor: pointer;
 }
 
 .input {
@@ -100,8 +103,8 @@ button:focus {
   box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.4);
 }
 
-.zoom-link>input {
-  color: #1D3557;
+.zoom-link > input {
+  color: #1d3557;
 }
 
 .tags {
@@ -122,23 +125,23 @@ button:focus {
   margin-top: 100px;
 }
 
-.home>.buttons>button {
+.home > .buttons > button {
   transition: transform 0.2s ease-out;
 }
 
-.home>.buttons>button:hover {
+.home > .buttons > button:hover {
   transform: scale(1.05);
 }
 
-.matched>.buttons>button {
+.matched > .buttons > button {
   transition: transform 0.2s ease-out;
 }
 
-.matched>.buttons>button:hover {
+.matched > .buttons > button:hover {
   transform: scale(1.05);
 }
 
 .content {
-  margin-left: 20% ;
+  margin-left: 20%;
   margin-right: 20%;
 }
