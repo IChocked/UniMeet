@@ -14,6 +14,9 @@ const Login = () => {
   // Error message
   const error = () => toast.error('Please fill in all fields.')
 
+  // Email error
+  const emailError = () => toast.error('Invalid email address.')
+
   // Handle Submit Button
   const handleSubmit = () => {
     // Check to see if any fields are empty
@@ -21,9 +24,16 @@ const Login = () => {
       error()
     }
 
-    // If email is valid and non-empty fields, move to interests page
+    // Non-empty fields
     else {
-      history.push('/homepage')
+      // Check to see if email has .edu
+      if (!email.includes('.edu')) {
+        emailError()
+      }
+      // If email is valid and non-empty fields, move to homepage
+      else {
+        history.push('/homepage')
+      }
     }
   }
 
