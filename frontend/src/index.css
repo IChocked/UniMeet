@@ -2,10 +2,7 @@
   font-family: "Arial";
 }
 
-html,
-body,
-#app,
-#app > div {
+html, body, #app, #app>div {
   height: 100%;
   width: 100%;
 }
@@ -24,6 +21,15 @@ header {
   margin-top: 70px;
 }
 
+h1 {
+  font-size: 20px;
+  text-align: center;
+}
+
+h2 {
+  padding: none;
+}
+
 h3 {
   font-size: 60px;
   text-align: center;
@@ -31,23 +37,37 @@ h3 {
   margin-top: 70px;
 }
 
-h2 {
-  padding: none;
+h4 {
+  text-align: center;
+  text-shadow: 2px 2px 4px #000000;
+  font-size: 25px;
 }
 
-h4 {
-  text-shadow: 2px 2px 4px #000000;
+h5 {
+  font-size: 10px;
+}
+
+h6 {
+  font-size: 20px;
+  margin: 10px;
+}
+
+h7 {
+  text-align: center;
+  font-size: 12px;
 }
 
 p {
+  text-align: center;
+  font-size: 12px;
   color: #1d3557;
 }
 
-.home > button {
+.home>button {
   transition: transform 0.2s ease-out;
 }
 
-.home > button:hover {
+.home>button:hover {
   transform: scale(1.05);
 }
 
@@ -98,12 +118,13 @@ button:focus {
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 50px;
   width: 190px;
   height: 35px;
   box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.4);
 }
 
-.zoom-link > input {
+.zoom-link>input {
   color: #1d3557;
 }
 
@@ -125,23 +146,43 @@ button:focus {
   margin-top: 100px;
 }
 
-.home > .buttons > button {
+.home>.buttons>button {
   transition: transform 0.2s ease-out;
 }
 
-.home > .buttons > button:hover {
+.home>.buttons>button:hover {
   transform: scale(1.05);
 }
 
-.matched > .buttons > button {
+.matched>.buttons>button {
   transition: transform 0.2s ease-out;
 }
 
-.matched > .buttons > button:hover {
+.matched>.buttons>button:hover {
   transform: scale(1.05);
 }
 
 .content {
   margin-left: 20%;
   margin-right: 20%;
+}
+
+.buttons-hp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-bottom: 40px;
+}
+
+.section {
+  margin: 70px;
+}
+
+img {
+  margin-top: 10%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
