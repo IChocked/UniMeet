@@ -8,6 +8,7 @@ const Register = () => {
   // States for fields
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
   const history = useHistory()
 
@@ -20,7 +21,7 @@ const Register = () => {
   // Handle Submit Button
   const handleSubmit = () => {
     // Check to see if any fields are empty
-    if (!email || !name) {
+    if (!email || !name || !password) {
       error()
     }
 
@@ -74,6 +75,30 @@ const Register = () => {
           placeholder='E-mail'
           onChange={e => {
             setEmail(e.target.value)
+          }}
+          style={{
+            color: 'black',
+            width: '300px',
+            height: '30px',
+            display: 'block',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            fontSize: '20px',
+            borderRadius: '25px',
+            padding: '10px',
+            border: 'none'
+          }}
+        />
+      </form>
+
+      <form>
+        <input
+          defaultValue={password}
+          className='input'
+          type='password'
+          placeholder='Password'
+          onChange={e => {
+            setPassword(e.target.value)
           }}
           style={{
             color: 'black',
