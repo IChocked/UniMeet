@@ -18,8 +18,8 @@ def main():
 
     best_match = match(uni_users, user_id, data)
 
-    update_data()
-    print(best_match)
+    # update_data(user_id, best_match)
+    print("Best match: ", best_match)
 
 
 """
@@ -46,8 +46,8 @@ def match(users, id, data):
     user_points = {}
     points = 0  # increment when interests match
     index = 0
-    user_interests = get_user_interests(data,id)
-    for user in users: # i is another user
+    user_interests = get_user_interests(data, id)
+    for user in users:  # i is another user
         for interest in user_interests:
             try:
                 if interest == data["users"][user]["interests"][str(index)]:
@@ -59,7 +59,7 @@ def match(users, id, data):
             index += 1
         index = 0
         points = 0
-    print(user_points)
+
 
     our_match = find_the_best_match(user_points)
 
@@ -68,7 +68,7 @@ def match(users, id, data):
 
 # Chooses the max value user that was calculated on match()
 def find_the_best_match(u_points):
-    highest_point = max(u_points,key=u_points.get)
+    highest_point = max(u_points, key=u_points.get)
     return highest_point
 
 
@@ -89,14 +89,26 @@ def get_user_interests(data,user):
 
     for i in range(max_interests):
         interests.append(data["users"][user]["interests"][str(i)])
-    print(interests)
+
     return interests
 
 
 # Updates json data
-def update_data():
-    pass # TODO update data
+# def update_data(user, match):
+#     with open('data.json', "r") as file:
+#         data = json.load(file)
+#
+#     new_meeting = {
+#         str(match): {
+#             "date": "utc",
+#             "link": "url"
+#         }
+#     }
+#     meetings = data["users"][user]["Meetings"]
+#
+#
+#     pass # TODO update data
+
 
 
 main()
-
