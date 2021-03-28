@@ -7,7 +7,7 @@ const history = useHistory()
 
 
 // @Param: valid university (a key in the db), name: string, interests: 5 string array
-function populateUser(uni, name, interests) {
+export function populateUser(uni, name, interests) {
   // push invalid interests to bypass index out of bound
   // will need to compensate for this in match.py (serverside matching script)
   if (interests.length < 5) {
@@ -29,21 +29,21 @@ function populateUser(uni, name, interests) {
   })
 }
 
-function addSelfToMatchQueue() {
+export function addSelfToMatchQueue() {
   let user = auth.currentUser
   database.ref("matching/" + user.uid).set({
     match: "-1"
   })
 }
 
-function removeSelfFromMatchQueue() {
+export function removeSelfFromMatchQueue() {
   let user = auth.currentUser
   database.ref("matching/" + user.uid).remove()
 }
 
-// TODO pass in a function so you can actually do something with the data retrieved
+// TODO pass in a export function so you can actually do something with the data retrieved
 // @Param: uid of the user you want to retrieve (auth.currentUser.uid if current user)
-function retrieveUser(uid) {
+export function retrieveUser(uid) {
   database.ref().child("users").child(uid).get().then(function(snapshot) {
     if (snapshot.exists()) {
       console.log(snapshot.val());
@@ -57,7 +57,7 @@ function retrieveUser(uid) {
 }
 
 // TODO figure out how to do the matched name
-function loadMeetingToPage(uid_meet, link_id, name_id) {
+export function loadMeetingToPage(uid_meet, link_id, name_id) {
   console.log(uid_meet, link_id, name_id)
   database.ref().child("users").child(auth.currentUser.uid).child("meetings").get().then(function(snapshot) {
     if (snapshot.exists()) {
@@ -86,7 +86,7 @@ function loadMeetingToPage(uid_meet, link_id, name_id) {
 
 
 // @Param: uid is the id of the person you matched with, date is the ISO8061 string for date and time, link is the link to the meeting
-function addMeeting(uid, date, link) {
+export function addMeeting(uid, date, link) {
   let user = auth.currentUser
   // add the event for the current user
   database.ref("users/" + user.uid + "/meetings/" + uid).set({
@@ -101,7 +101,7 @@ function addMeeting(uid, date, link) {
 }
 
 // @Param: interests: 5 string array
-function modifyInterests(interests) {
+export function modifyInterests(interests) {
   // push invalid interests to bypass index out of bound
   // will need to compensate for this in match.py (serverside matching script)
   if (interests.length < 5) {

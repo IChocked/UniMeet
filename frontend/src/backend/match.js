@@ -46,8 +46,8 @@ ValueEventListener changeListener = new ValueEventListener() {
 };
 
 
-// the function that initiates the matching algorithm on the server
-function getNewMatch() {
+// the export function that initiates the matching algorithm on the server
+export function getNewMatch() {
   // immedietely push to this screen
   history.push('/matching')
 
@@ -60,10 +60,10 @@ function getNewMatch() {
   // ref.removeEventListener(changeListener)
 }
 
-function loadMatchToPage(uid_meet) {
+export function loadMatchToPage(uid_meet) {
   loadMatchToPage(uid_meet, "matched-link", "matched-name")
 }
 
-function loadHomePage() {
+export function loadHomePage() {
 
 }

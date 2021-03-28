@@ -5,19 +5,14 @@ DOCS:
 
 */
 
-import {
-  firebase,
-  auth,
-  database
-} from './config.js'
-
 // for the page changing and errors
 import toast, { Toaster } from 'react-hot-toast'
-import { Link, Redirect, useHistory } from 'react-router-dom'
 const loginError = () => toast.error('Invalid email address or password.')
 // can get more advanced with error codes here but for hacky purposes just generic error
   // See https://firebase.google.com/docs/reference/js/firebase.auth.Auth#createuserwithemailandpassword for specific error codes to notify the user of
 const registrationError = () => toast.error('Registration failed.')
+
+import { Link, Redirect, useHistory } from 'react-router-dom'
 const history = useHistory()
 
 // @Param: email is a valid email, pass is a valid password according to Firebase requirements

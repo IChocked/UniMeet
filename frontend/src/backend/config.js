@@ -1,3 +1,5 @@
+import firebase from 'firebase'
+
 var firebaseConfig = {
   apiKey: "AIzaSyACQvxT_lrFID8rled2x7oVlCAvHMzyhO8",
   authDomain: "unimeet-30884.firebaseapp.com",
@@ -12,3 +14,7 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 var database = firebase.database();
 var auth = firebase.auth();
+
+export default firebase;
+export database
+export auth

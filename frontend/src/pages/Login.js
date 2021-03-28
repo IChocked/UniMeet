@@ -4,6 +4,8 @@ import React, { useState } from 'react'
 import { Link, Redirect, useHistory } from 'react-router-dom'
 import toast, { Toaster } from 'react-hot-toast'
 
+import * as authen from '../backend/auth.js'
+
 const Login = () => {
   // States for fields
   const [email, setEmail] = useState('')
@@ -32,7 +34,7 @@ const Login = () => {
       }
       // If email is valid and non-empty fields, move to homepage
       else {
-        login(email, password)
+        authen.login(email, password)
       }
     }
   }
