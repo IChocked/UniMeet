@@ -33,7 +33,7 @@ const Register = () => {
       }
       // If email is valid and non-empty fields, move to interests page
       else {
-        history.push('/interests')
+        register(email, password)
       }
     }
   }

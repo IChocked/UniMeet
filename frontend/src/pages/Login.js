@@ -32,7 +32,7 @@ const Login = () => {
       }
       // If email is valid and non-empty fields, move to homepage
       else {
-        history.push('/homepage')
+        login(email, password)
       }
     }
   }
