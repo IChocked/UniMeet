@@ -91,6 +91,10 @@ const Matched = () => {
       <Toaster position='top-center' reverseOrder={false} />
       <h3>You have been matched with -insert name-!</h3>
 
+      <div className='label'>
+        <h2>Join the link to meet with them.</h2>
+      </div>
+
       <div className='zoom-link'>
         <input defaultValue={link} name='zoom-link' readOnly />
 
