@@ -35,7 +35,7 @@ const Interests = () => {
 
   // Handle Submit Button
   const handleSubmit = () => {
-    history.push('/schedule')
+    history.push('/matching')
   }
 
   // Handle Click

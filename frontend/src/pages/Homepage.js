@@ -3,6 +3,7 @@
 import React from 'react'
 import { Link, Redirect, useHistory } from 'react-router-dom'
 import { FaClipboard, FaCopy } from 'react-icons/fa'
+import toast, { Toaster } from 'react-hot-toast'
 
 const Homepage = () => {
   const history = useHistory()
@@ -16,8 +17,40 @@ const Homepage = () => {
   const handleSubmit = () => {
     history.push('/matching')
   }
+
+  // Displays message if no password has been generated
+  const errorCopy = () => toast('No password has been generated.')
+
+  // Notifies if password has been copied to clipboard
+  const notify = () => toast('Copied to clipboard.')
+
+  // Copies to Clipboard
+  const clipboard = (e) => {
+    const textArea = document.createElement('textarea')
+
+    textArea.innerText = e.target.defaultValue;
+
+    document.body.appendChild(textArea)
+
+    textArea.select()
+
+    document.execCommand('copy')
+
+    textArea.remove()
+  }
+
+  // Handle Copy
+  const handleCopy = (e) => {
+    if (e.target.defaultValue === '') {
+      errorCopy()
+    } else {
+      notify()
+      clipboard(e)
+    }
+  }
   return (
     <div className='homepage'>
+      <Toaster position='top-center' reverseOrder={false} />
       <h3>Welcome -user-!</h3>
 
       <div className='content'>
@@ -111,7 +144,11 @@ const Homepage = () => {
           <div className='zoom-link'>
             <input defaultValue='us.zoom.com/blah' name='zoom-link' readOnly />
 
-            <button className='cpy-btn'>
+            <button
+              className='cpy-btn'
+              onClick={handleCopy}
+              style={{ cursor: 'pointer' }}
+            >
               <FaClipboard />
             </button>
           </div>
@@ -121,7 +158,11 @@ const Homepage = () => {
           <div className='zoom-link'>
             <input defaultValue='us.zoom.com/blah' name='zoom-link' readOnly />
 
-            <button className='cpy-btn'>
+            <button
+              className='cpy-btn'
+              onClick={handleCopy}
+              style={{ cursor: 'pointer' }}
+            >
               <FaClipboard />
             </button>
           </div>
@@ -131,7 +172,11 @@ const Homepage = () => {
           <div className='zoom-link'>
             <input defaultValue='us.zoom.com/blah' name='zoom-link' readOnly />
 
-            <button className='cpy-btn'>
+            <button
+              className='cpy-btn'
+              onClick={handleCopy}
+              style={{ cursor: 'pointer' }}
+            >
               <FaClipboard />
             </button>
           </div>

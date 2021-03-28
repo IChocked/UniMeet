@@ -5,7 +5,30 @@ import { Link, Redirect, useHistory } from 'react-router-dom'
 
 const EditInterests = () => {
   // Check to see if tags are selected
-  const [checked, setChecked] = useState(false)
+
+  const [checkedWrite, setCheckedWrite] = useState(false)
+
+  const [checkedPhoto, setCheckedPhoto] = useState(false)
+
+  const [checkedOut, setCheckedOut] = useState(false)
+
+  const [checkedMusic, setCheckedMusic] = useState(false)
+
+  const [checkedRead, setCheckedRead] = useState(false)
+
+  const [checkedCook, setCheckedCook] = useState(false)
+
+  const [checkedAI, setCheckedAI] = useState(false)
+
+  const [checkedTravel, setCheckedTravel] = useState(false)
+
+  const [checkedGarden, setCheckedGarden] = useState(false)
+
+  const [checkedProgram, setCheckedProgram] = useState(false)
+
+  const [checkedRun, setCheckedRun] = useState(false)
+
+  const [checkedBike, setCheckedBike] = useState(false)
 
   const history = useHistory()
 
@@ -14,15 +37,158 @@ const EditInterests = () => {
     history.push('/homepage')
   }
 
-  // Handle Click - Doesn't account for individual tag's status
-  const handleClick = e => {
+  // Handle Click
+  const handleClickWrite = e => {
     // If not selected yet, change to selected
-    if (checked === false) {
-      setChecked(true)
+    if (checkedWrite === false) {
+      setCheckedWrite(true)
       e.target.style.backgroundColor = '#A8DADC'
       // If selected, change to not selected
     } else {
-      setChecked(false)
+      setCheckedWrite(false)
+      e.target.style.backgroundColor = '#fff'
+    }
+  }
+
+  // Handle Click
+  const handleClickPhoto = e => {
+    // If not selected yet, change to selected
+    if (checkedPhoto === false) {
+      setCheckedPhoto(true)
+      e.target.style.backgroundColor = '#A8DADC'
+      // If selected, change to not selected
+    } else {
+      setCheckedPhoto(false)
+      e.target.style.backgroundColor = '#fff'
+    }
+  }
+
+  // Handle Click
+  const handleClickOut = e => {
+    // If not selected yet, change to selected
+    if (checkedOut === false) {
+      setCheckedOut(true)
+      e.target.style.backgroundColor = '#A8DADC'
+      // If selected, change to not selected
+    } else {
+      setCheckedOut(false)
+      e.target.style.backgroundColor = '#fff'
+    }
+  }
+
+  // Handle Click
+  const handleClickMusic = e => {
+    // If not selected yet, change to selected
+    if (checkedMusic === false) {
+      setCheckedMusic(true)
+      e.target.style.backgroundColor = '#A8DADC'
+      // If selected, change to not selected
+    } else {
+      setCheckedMusic(false)
+      e.target.style.backgroundColor = '#fff'
+    }
+  }
+
+  // Handle Click
+  const handleClickRead = e => {
+    // If not selected yet, change to selected
+    if (checkedRead === false) {
+      setCheckedRead(true)
+      e.target.style.backgroundColor = '#A8DADC'
+      // If selected, change to not selected
+    } else {
+      setCheckedRead(false)
+      e.target.style.backgroundColor = '#fff'
+    }
+  }
+
+  // Handle Click
+  const handleClickCook = e => {
+    // If not selected yet, change to selected
+    if (checkedCook === false) {
+      setCheckedCook(true)
+      e.target.style.backgroundColor = '#A8DADC'
+      // If selected, change to not selected
+    } else {
+      setCheckedCook(false)
+      e.target.style.backgroundColor = '#fff'
+    }
+  }
+
+  // Handle Click
+  const handleClickAI = e => {
+    // If not selected yet, change to selected
+    if (checkedAI === false) {
+      setCheckedAI(true)
+      e.target.style.backgroundColor = '#A8DADC'
+      // If selected, change to not selected
+    } else {
+      setCheckedAI(false)
+      e.target.style.backgroundColor = '#fff'
+    }
+  }
+
+  // Handle Click
+  const handleClickTravel = e => {
+    // If not selected yet, change to selected
+    if (checkedTravel === false) {
+      setCheckedTravel(true)
+      e.target.style.backgroundColor = '#A8DADC'
+      // If selected, change to not selected
+    } else {
+      setCheckedTravel(false)
+      e.target.style.backgroundColor = '#fff'
+    }
+  }
+
+  // Handle Click
+  const handleClickGarden = e => {
+    // If not selected yet, change to selected
+    if (checkedGarden === false) {
+      setCheckedGarden(true)
+      e.target.style.backgroundColor = '#A8DADC'
+      // If selected, change to not selected
+    } else {
+      setCheckedGarden(false)
+      e.target.style.backgroundColor = '#fff'
+    }
+  }
+
+  // Handle Click
+  const handleClickProgram = e => {
+    // If not selected yet, change to selected
+    if (checkedProgram === false) {
+      setCheckedProgram(true)
+      e.target.style.backgroundColor = '#A8DADC'
+      // If selected, change to not selected
+    } else {
+      setCheckedProgram(false)
+      e.target.style.backgroundColor = '#fff'
+    }
+  }
+
+  // Handle Click
+  const handleClickRun = e => {
+    // If not selected yet, change to selected
+    if (checkedRun === false) {
+      setCheckedRun(true)
+      e.target.style.backgroundColor = '#A8DADC'
+      // If selected, change to not selected
+    } else {
+      setCheckedRun(false)
+      e.target.style.backgroundColor = '#fff'
+    }
+  }
+
+  // Handle Click
+  const handleClickBike = e => {
+    // If not selected yet, change to selected
+    if (checkedBike === false) {
+      setCheckedBike(true)
+      e.target.style.backgroundColor = '#A8DADC'
+      // If selected, change to not selected
+    } else {
+      setCheckedBike(false)
       e.target.style.backgroundColor = '#fff'
     }
   }
@@ -31,9 +197,13 @@ const EditInterests = () => {
     <div className='interests'>
       <h3>Interests</h3>
 
+      <div className='label'>
+        <h2>Please select up 5 topics that interest you.</h2>
+      </div>
+
       <div className='tags'>
         <button
-          onClick={handleClick}
+          onClick={handleClickWrite}
           style={{
             color: '#1D3557',
             width: '120px',
@@ -47,11 +217,11 @@ const EditInterests = () => {
             margin: '10px'
           }}
         >
-          <b>Football</b>
+          Writing
         </button>
 
         <button
-          onClick={handleClick}
+          onClick={handleClickPhoto}
           style={{
             color: '#1D3557',
             width: '120px',
@@ -65,11 +235,11 @@ const EditInterests = () => {
             margin: '10px'
           }}
         >
-          <b>Gym</b>
+          Photography
         </button>
 
         <button
-          onClick={handleClick}
+          onClick={handleClickOut}
           style={{
             color: '#1D3557',
             width: '120px',
@@ -83,11 +253,11 @@ const EditInterests = () => {
             margin: '10px'
           }}
         >
-          <b>Programming</b>
+          Outdoors
         </button>
 
         <button
-          onClick={handleClick}
+          onClick={handleClickMusic}
           style={{
             color: '#1D3557',
             width: '120px',
@@ -101,11 +271,11 @@ const EditInterests = () => {
             margin: '10px'
           }}
         >
-          <b>Hiking</b>
+          Music
         </button>
 
         <button
-          onClick={handleClick}
+          onClick={handleClickRead}
           style={{
             color: '#1D3557',
             width: '120px',
@@ -119,11 +289,11 @@ const EditInterests = () => {
             margin: '10px'
           }}
         >
-          <b>Tennis</b>
+          Reading
         </button>
 
         <button
-          onClick={handleClick}
+          onClick={handleClickCook}
           style={{
             color: '#1D3557',
             width: '120px',
@@ -137,11 +307,11 @@ const EditInterests = () => {
             margin: '10px'
           }}
         >
-          <b>Art</b>
+          Cooking
         </button>
 
         <button
-          onClick={handleClick}
+          onClick={handleClickAI}
           style={{
             color: '#1D3557',
             width: '120px',
@@ -155,11 +325,11 @@ const EditInterests = () => {
             margin: '10px'
           }}
         >
-          <b>Manga</b>
+          AI
         </button>
 
         <button
-          onClick={handleClick}
+          onClick={handleClickTravel}
           style={{
             color: '#1D3557',
             width: '120px',
@@ -173,7 +343,79 @@ const EditInterests = () => {
             margin: '10px'
           }}
         >
-          <b>Anime</b>
+          Travel
+        </button>
+
+        <button
+          onClick={handleClickGarden}
+          style={{
+            color: '#1D3557',
+            width: '120px',
+            height: '40px',
+            borderRadius: '25px',
+            border: 'none',
+            backgroundColor: '#fff',
+            fontSize: '15px',
+            boxShadow: '0 4px 7px rgba(0, 0, 0, 0.4)',
+            cursor: 'pointer',
+            margin: '10px'
+          }}
+        >
+          Gardening
+        </button>
+
+        <button
+          onClick={handleClickProgram}
+          style={{
+            color: '#1D3557',
+            width: '120px',
+            height: '40px',
+            borderRadius: '25px',
+            border: 'none',
+            backgroundColor: '#fff',
+            fontSize: '15px',
+            boxShadow: '0 4px 7px rgba(0, 0, 0, 0.4)',
+            cursor: 'pointer',
+            margin: '10px'
+          }}
+        >
+          Programming
+        </button>
+
+        <button
+          onClick={handleClickRun}
+          style={{
+            color: '#1D3557',
+            width: '120px',
+            height: '40px',
+            borderRadius: '25px',
+            border: 'none',
+            backgroundColor: '#fff',
+            fontSize: '15px',
+            boxShadow: '0 4px 7px rgba(0, 0, 0, 0.4)',
+            cursor: 'pointer',
+            margin: '10px'
+          }}
+        >
+          Running
+        </button>
+
+        <button
+          onClick={handleClickBike}
+          style={{
+            color: '#1D3557',
+            width: '120px',
+            height: '40px',
+            borderRadius: '25px',
+            border: 'none',
+            backgroundColor: '#fff',
+            fontSize: '15px',
+            boxShadow: '0 4px 7px rgba(0, 0, 0, 0.4)',
+            cursor: 'pointer',
+            margin: '10px'
+          }}
+        >
+          Biking
         </button>
       </div>
 
