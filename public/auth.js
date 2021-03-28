@@ -37,7 +37,7 @@ function login(email, pass) {
   .finally(() => {
     // populateUser("UCLA", "Shayla", ["ike", "hike", "hike", "hike", "hike"])
     // modifyInterests(["temp", "temp", "temp", "temp", "temp"])
-    retrieveMeetings()
+    // retrieveMeetings()
     // addMeeting("VS1JszOo26WLtB2uo5wyAY0GE5c2", "2021-03-28T01:25:34Z", "zoom.whatever/12345")
   })
 }
