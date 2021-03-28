@@ -12,4 +12,4 @@ UniMeets takes a user's interests and availability throughout the week and finds
 ## What's next for UniMeet
 We plan to add integrations with Google Calendar and a more refined interest tag selection.
 
-![logo_light_transparent](\assets\logo_light_transparent.png)
+![logo_light_transparent](/assets/logo_light_transparent.png)
