@@ -21,6 +21,7 @@ function register(email, pass) {
   })
 }
 
+
 // @Param: email, password
 function login(email, pass) {
   firebase.auth().signInWithEmailAndPassword(email, pass)
@@ -36,10 +37,11 @@ function login(email, pass) {
   .finally(() => {
     // populateUser("UCLA", "Shayla", ["ike", "hike", "hike", "hike", "hike"])
     // modifyInterests(["temp", "temp", "temp", "temp", "temp"])
-    // retrieveFutureMeetings()
-    // addFutureMeeting("Zu5fWXfxl4V5cOGEGzoeoMA6tfA2", "2021-03-28T01:25:34Z", "zoom.whatever/12345")
+    retrieveMeetings()
+    // addMeeting("VS1JszOo26WLtB2uo5wyAY0GE5c2", "2021-03-28T01:25:34Z", "zoom.whatever/12345")
   })
 }
+
 
 function logout() {
   firebase.auth().signOut().then(() => {
