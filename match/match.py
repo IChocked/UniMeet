@@ -71,7 +71,6 @@ def main():
                     return True
             except KeyError:
                 print(Exception)
-        print("here")
         return False
 
     match()
