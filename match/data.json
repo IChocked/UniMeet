@@ -1,0 +1,54 @@
+{
+    "Universities": {
+        "UCLA": {
+            "UID": {
+                "Interests": {
+                    "Climbing": 1,
+                    "Running": 1,
+                    "ai": 0
+                },
+                "Name": "Brian",
+                "PreviousMatches": {
+                    "0": "UID2",
+                    "1": "UID3"
+                }
+            },
+            "UID1": {
+                "Interests": {
+                    "Climbing": 1,
+                    "Running": 1,
+                    "ai": 1
+                },
+                "Name": "Suleyman",
+                "PreviousMatches": {
+                    "0": "UID2",
+                    "1": "UID3"
+                }
+            },
+            "UID2": {
+                "Interests": {
+                    "Climbing": 1,
+                    "Running": 0,
+                    "ai": 0
+                },
+                "Name": "Alter",
+                "PreviousMatches": {
+                    "0": "UID",
+                    "1": "UID1"
+                }
+            },
+            "UID3": {
+                "Interests": {
+                    "Climbing": 1,
+                    "Running": 1,
+                    "ai": 1
+                },
+                "Name": "Alter",
+                "PreviousMatches": {
+                    "0": "UID",
+                    "1": "UID1"
+                }
+            }
+        }
+    }
+}
