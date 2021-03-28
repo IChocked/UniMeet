@@ -15,7 +15,7 @@ const Homepage = () => {
 
   // Handle Submit Button
   const handleSubmit = () => {
-    history.push('/matching')
+    getNewMatch()
   }
 
   // Displays message if no password has been generated

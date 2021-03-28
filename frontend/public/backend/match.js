@@ -19,7 +19,10 @@ ValueEventListener changeListener = new ValueEventListener() {
       } else { // succeeded with valid uid
         // handle success by adding match to list and pushing to matched
         console.log("Success: match with", match)
-        addMeeting(match, "not_using_date", )
+        let link = handleLink()
+        addMeeting(match, "not_using_date", link)
+        history.push('/matched')
+        loadMatchToPage(match)
       }
     }
     else {
@@ -55,4 +58,12 @@ function getNewMatch() {
   ref = database.ref("matching/" + uid + "/match")
   ref.addValueEventListener(changeListener)
   // ref.removeEventListener(changeListener)
+}
+
+function loadMatchToPage(uid_meet) {
+  loadMatchToPage(uid_meet, "matched-link", "matched-name")
+}
+
+function loadHomePage() {
+
 }
