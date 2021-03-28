@@ -16,6 +16,14 @@ function validateUni(uni) {}
 
 // @Param: valid university (a key in the db), name: string, interests: 5 string array
 function populateUser(uni, name, interests) {
+  // push invalid interests to bypass index out of bound
+    // will need to compensate for this in match.py (serverside matching script)
+  if (interests.length < 5) {
+    for (var i = 0; i < 5 - interests.length; i++) {
+      interests.push("-1")
+    }
+  }
+
   let user = auth.currentUser
   database.ref("users/" + user.uid).set({
     name: name,
@@ -79,6 +87,13 @@ function addMeeting(uid, date, link) {
 
 // @Param: interests: 5 string array
 function modifyInterests(interests) {
+  // push invalid interests to bypass index out of bound
+    // will need to compensate for this in match.py (serverside matching script)
+  if (interests.length < 5) {
+    for (var i = 0; i < 5 - interests.length; i++) {
+      interests.push("-1")
+    }
+  }
   let user = auth.currentUser
   database.ref("users/" + user.uid + "/interests").set({
     0: interests[0],
