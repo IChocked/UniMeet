@@ -6,8 +6,8 @@ import toast, { Toaster } from 'react-hot-toast'
 
 const Login = () => {
   // States for fields
-  const [name, setName] = useState('')
   const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
   const history = useHistory()
 
@@ -20,7 +20,7 @@ const Login = () => {
   // Handle Submit Button
   const handleSubmit = () => {
     // Check to see if any fields are empty
-    if (!email || !name) {
+    if (!email || !password) {
       error()
     }
 
@@ -45,11 +45,12 @@ const Login = () => {
 
       <form>
         <input
-          defaultValue={name}
+          defaultValue={email}
           className='input'
-          placeholder='Name'
+          type='email'
+          placeholder='E-mail'
           onChange={e => {
-            setName(e.target.value)
+            setEmail(e.target.value)
           }}
           style={{
             color: 'black',
@@ -68,12 +69,12 @@ const Login = () => {
 
       <form>
         <input
-          defaultValue={email}
+          defaultValue={password}
           className='input'
-          type='email'
-          placeholder='E-mail'
+          type='password'
+          placeholder='Password'
           onChange={e => {
-            setEmail(e.target.value)
+            setPassword(e.target.value)
           }}
           style={{
             color: 'black',
