@@ -84,7 +84,7 @@ const Matched = () => {
     history.push('/homepage')
   }
 
-  const [link] = useState(handleLink())
+  const link = handleLink()
 
   return (
     <div className='matched'>
@@ -94,7 +94,7 @@ const Matched = () => {
       <div className='zoom-link'>
         <input defaultValue={link} name='zoom-link' readOnly />
 
-        <button className='cpy-btn' onClick={handleCopy}>
+        <button className='cpy-btn' onClick={handleCopy} style={{cursor: 'pointer'}}>
           <FaClipboard />
         </button>
       </div>

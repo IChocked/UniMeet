@@ -34,7 +34,6 @@ const Homepage = () => {
                 backgroundColor: '#fff',
                 fontSize: '15px',
                 boxShadow: '0 4px 7px rgba(0, 0, 0, 0.4)',
-                cursor: 'pointer',
                 margin: '10px'
               }}
             >
@@ -53,7 +52,6 @@ const Homepage = () => {
                 backgroundColor: '#fff',
                 fontSize: '15px',
                 boxShadow: '0 4px 7px rgba(0, 0, 0, 0.4)',
-                cursor: 'pointer',
                 margin: '10px'
               }}
             >
@@ -72,7 +70,6 @@ const Homepage = () => {
                 backgroundColor: '#fff',
                 fontSize: '15px',
                 boxShadow: '0 4px 7px rgba(0, 0, 0, 0.4)',
-                cursor: 'pointer',
                 margin: '10px'
               }}
             >
