@@ -29,12 +29,28 @@ const Interests = () => {
   const [checkedRun, setCheckedRun] = useState(false)
 
   const [checkedBike, setCheckedBike] = useState(false)
-  
+
 
   const history = useHistory()
 
   // Handle Submit Button
   const handleSubmit = () => {
+    var interests = []
+    if (checkedWrite) {interests.push("write")}
+    if (checkedPhoto) {interests.push("photo")}
+    if (checkedOut) {interests.push("out")}
+    if (checkedMusic) {interests.push("music")}
+    if (checkedRead) {interests.push("read")}
+    if (checkedCook) {interests.push("cook")}
+    if (checkedAI) {interests.push("ai")}
+    if (checkedTravel) {interests.push("travel")}
+    if (checkedGarden) {interests.push("garden")}
+    if (checkedProgram) {interests.push("program")}
+    if (checkedRun) {interests.push("run")}
+    if (checkedBike) {interests.push("bike")}
+
+    modifyInterests(interests)
+
     history.push('/matching')
   }
 
