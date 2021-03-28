@@ -1,7 +1,6 @@
 /*
 TODO
   - potentially we could populate the db with valid universities, but for hackathon purposes might not be necessary and we could use a single school as an example
-  - read and write permissions on Firebase from all to logged in users
 
   Server-Side
   - Take request with a user token and return a matched user token
@@ -46,6 +45,44 @@ function retrieveUser(uid) {
   });
 }
 
+// TODO get to the point where they're in an easy datatype
+function retrieveFutureMeetings() {
+  database.ref().child("users").child(auth.currentUser.uid).child("futureMeeetings").get().then(function(snapshot) {
+    if (snapshot.exists()) {
+      let uids = Object.keys(snapshot.val())
+      console.log(uids)
+    }
+    else {
+      console.log("No future meetings");
+    }
+  }).catch(function(error) {
+    console.error(error);
+  });
+}
+
+// @Param: uid is the id of the person you matched with, date is the ISO8601 string for date and time, link is the link to the meeting
+function addPreviousMeeting(uid, date, link) {
+  let user = auth.currentUser
+  database.ref("users/" + user.uid + "/previousMatches/" + uid).set({
+    date: date,
+    link: link
+  })
+}
+
+// @Param: uid is the id of the person you matched with, date is the ISO8061 string for date and time, link is the link to the meeting
+function addFutureMeeting(uid, date, link) {
+  let user = auth.currentUser
+  database.ref("users/" + user.uid + "/futureMeeetings/" + uid).set({
+    date: date,
+    link: link
+  })
+}
+
+
+function retrievePreviousMeetings() {
+
+}
+
 // @Param: interests: 5 string array
 function modifyInterests(interests) {
   let user = auth.currentUser
@@ -58,8 +95,13 @@ function modifyInterests(interests) {
   })
 }
 
+// the function that initiates the matching algorithm on the server
+function getNewMatch() {
+
+}
 
 
+// login("test@gmail.com", "doesn'tmatter123^")
 login("bharde@me.com", "temP123@")
 // retrieveUser("Zu5fWXfxl4V5cOGEGzoeoMA6tfA2")
 

@@ -34,11 +34,12 @@ function login(email, pass) {
     console.log(error)
   })
   .finally(() => {
-    populateUser("UCLA", "Brian", ["climbing", "climbing", "climbing", "climbing", "climbing"])
+    // populateUser("UCLA", "Shayla", ["ike", "hike", "hike", "hike", "hike"])
     // modifyInterests(["temp", "temp", "temp", "temp", "temp"])
+    // retrieveFutureMeetings()
+    // addFutureMeeting("Zu5fWXfxl4V5cOGEGzoeoMA6tfA2", "2021-03-28T01:25:34Z", "zoom.whatever/12345")
   })
 }
-
 
 function logout() {
   firebase.auth().signOut().then(() => {
